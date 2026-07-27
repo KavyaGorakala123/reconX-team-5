@@ -64,3 +64,9 @@ REFRESH MATERIALIZED VIEW CONCURRENTLY mv_daily_recon_summary;
 SELECT id, symbol, metadata
 FROM instruments
 WHERE metadata @> '{"sector":"Banking"}'::jsonb;
+
+
+-- TICKET-ADV008
+-- Refresh materialized view concurrently
+
+REFRESH MATERIALIZED VIEW CONCURRENTLY mv_daily_recon_summary;
